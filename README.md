@@ -115,6 +115,20 @@ pnpm run typecheck
 pnpm run build
 ```
 
+### Standalone Camera Demo
+
+To inspect the real camera renderer without a Paperclip installation, run:
+
+```bash
+pnpm install
+pnpm run demo:serve
+```
+
+Open `http://127.0.0.1:4173`. The demo imports the production `PixelOfficeCanvas`
+and uses the production layouts and sprite assets with synthetic agent activity.
+Use `pnpm run demo:build` to create a static build in `demo-dist/`.
+Run `pnpm run demo:typecheck` to validate the standalone renderer path.
+
 ### Self-Hosted Docker Install
 
 For self-hosted Paperclip, clone Agent Pixels into a folder that is visible inside the Paperclip container. The install API must receive the container path, not the host path.
